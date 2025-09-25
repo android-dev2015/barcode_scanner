@@ -1,5 +1,6 @@
 // example/lib/main.dart
 import 'package:ai_barcode_scanner/ai_barcode_scanner.dart';
+// import 'package:ai_barcode_scanner/mqrcsc.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -155,6 +156,23 @@ class _HomePageState extends State<HomePage> {
                     scanner: AiBarcodeScanner(
                       galleryButtonType: GalleryButtonType.icon,
                       galleryButtonText: "Select from Photos",
+                      onDetect: (BarcodeCapture capture) {
+                        /// Do something with the barcode
+                      },
+                    ),
+                  ),
+                  _buildDemoButton(
+                    title: "MQRCSC",
+                    subtitle: "custom button style",
+                    scanner: MQRCSC(
+                      // Use appBarBuilder to provide a custom AppBar.
+                      appBarBuilder: (context, controller) {
+                        return AppBar(
+                          title: const Text("Custom Scanner"),
+                          centerTitle: true,
+                          backgroundColor: Colors.white,
+                        );
+                      },
                       onDetect: (BarcodeCapture capture) {
                         /// Do something with the barcode
                       },
