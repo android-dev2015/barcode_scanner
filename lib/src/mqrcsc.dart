@@ -230,9 +230,9 @@ class _MQRCSCState extends State<MQRCSC> {
 
     final screenSize = MediaQuery.sizeOf(context);
     final defaultScanWindowWidth =
-        isNoRect ? screenSize.width : screenSize.width * 0.8;
+        isNoRect ? screenSize.width : screenSize.width * 0.5;
     final defaultScanWindowHeight =
-        isNoRect ? screenSize.height : screenSize.height * 0.36;
+        isNoRect ? screenSize.width : screenSize.width * 0.5;
     final defaultScanWindow = Rect.fromCenter(
       center: screenSize.center(Offset.zero),
       width: defaultScanWindowWidth,
