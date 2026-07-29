@@ -1,3 +1,11 @@
+## 8.0.0
+
+**BREAKING CHANGE:**
+
+- Raised the minimum supported SDKs to Flutter 3.44 and Dart 3.12.
+- Migrated the Android example to built-in Kotlin.
+- Updated `mobile_scanner` to a version compatible with built-in Kotlin.
+
 ## 7.0.0
 
 **Improvements:**
